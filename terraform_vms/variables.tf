@@ -31,29 +31,13 @@ variable "user_name" {
   default     = "tanker"
 }
 
-variable "vm_base" {
-  type = map(any)
-  default = {
-    cores         = 2,
-    memory        = 2,
-    core_fraction = 20,
-    image_family  = "centos-7"
-    image_id = "fd8qjapp8kkrjj35gokr"
-    disk_size     = 20
-  }
-}
-
 variable "ssh_public_key" {
   type        = string
   default     = "~/.ssh/id_rsa.pub"
   description = "location of ssh public key"
 }
 
-variable "nat-instance-ip" {
-  default = "192.168.10.254"
-}
-
-variable "nat-instance-image-id" {
-  default = "fd86d9qcjsf49bjboqkp"
+variable "lamp-instance-image-id" {
+  default = "fd827b91d99psvq5fjit"
 }
 
